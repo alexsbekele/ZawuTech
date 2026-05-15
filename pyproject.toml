@@ -1,0 +1,24 @@
+[project]
+name = "madi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.18.4",
+    "bcrypt==4.0.1",
+    "fastapi>=0.136.1",
+    "jinja2>=3.1.6",
+    "passlib[bcrypt]>=1.7.4",
+    "psycopg2-binary>=2.9.12",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.1",
+    "python-jose[cryptography]>=3.5.0",
+    "python-multipart>=0.0.27",
+    "requests>=2.33.1",
+    "schema>=0.7.8",
+    "sqlalchemy>=2.0.49",
+    "streamlit>=1.57.0",
+    "uvicorn[standard]>=0.46.0",
+    "websockets>=16.0",
+]

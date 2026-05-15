@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZawuTech Community</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <!-- REGISTER SECTION -->
+    <div id="register-section">
+        <h2>Create Account</h2>
+        <input type="text" id="reg-username" placeholder="Username"><br>
+        <input type="email" id="reg-email" placeholder="Email"><br>
+        <input type="password" id="reg-password" placeholder="Password"><br>
+        <button onclick="register()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        <p id="reg-message"></p>
+    </div>
+
+    <!-- LOGIN SECTION -->
+    <div id="login-section" style="display:none;">
+        <h2>Login</h2>
+        <input type="text" id="log-username" placeholder="Username"><br>
+        <input type="password" id="log-password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <p>No account? <a href="#" onclick="showRegister()">Register</a></p>
+        <p id="log-message"></p>
+    </div>
+
+    <!-- HOME SECTION -->
+    <div id="home-section" style="display:none;">
+        <h2>Welcome to ZawuTech Community!</h2>
+        <button onclick="logout()">Logout</button>
+
+        <hr>
+
+        <!-- Create Post -->
+         <div class = "create-post-box">
+        <h3>Create Post</h3>
+        <input type="text" id="post-title" placeholder="Title"><br>
+        <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+        <input type="file" id="post-image" accept="image/*"><br>
+        <button onclick="createPost()">Post</button>
+        <p id="post-message"></p>
+        </div>
+        <hr>
+
+        <!-- All Posts -->
+        <h3>All Posts</h3>
+        <div id="posts-container"></div>
+    </div>
+
+    <script src="{{ url_for('static', path='/app.js') }}"></script>
+</body>
+</html>
